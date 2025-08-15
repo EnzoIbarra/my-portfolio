@@ -50,10 +50,8 @@ export default function Navbar() {
 		<nav className='fixed top-0 left-0 w-full bg-black/80 text-white z-50'>
 			<div className='max-w-7xl mx-auto px-4 py-4 flex justify-between items-center'>
 				<div className='text-xl font-bold tracking-wide'>
-					<span className='text-white'>MM</span>
 					<span className='text-red-600 ml-1'>Enzo Ibarra</span>
 				</div>
-
 				<ul className='hidden md:flex gap-6 text-sm font-medium'>
 					{navItems.map((item) => (
 						<li key={item.id}>
