@@ -1,6 +1,6 @@
 'use client';
 
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, Download, Send } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function Hero() {
@@ -11,14 +11,16 @@ export default function Hero() {
 			greeting: '¡Hola! Soy',
 			name: 'Enzo Ibarra',
 			role: 'Desarrollador Frontend',
-			cv: 'Descargar CV',
+			text: 'Apasionado con trabajar con tecnologías actuales como React, Next.js y Tailwind CSS creación de interfaces modernas y funcionales',
+			cv: 'CV',
 			contact: 'Contacto',
 		},
 		en: {
 			greeting: "Hi! I'm",
 			name: 'Enzo Ibarra',
 			role: 'Frontend Developer',
-			cv: 'Download CV',
+			text: 'Passionate about working with modern technologies such as React, Next.js, and Tailwind CSS, creating modern and functional interfaces.',
+			cv: 'CV',
 			contact: 'Contact',
 		},
 	};
@@ -28,28 +30,26 @@ export default function Hero() {
 	return (
 		<div
 			id='home'
-			className='min-h-screen flex flex-col justify-center items-center text-center px-4'
+			className='min-h-screen flex flex-col justify-center items-left text-left ml-7 px-4'
 		>
-			<h1 className='text-3xl md:text-5xl font-bold'>{t.greeting}</h1>
-			<h2 className='text-4xl md:text-6xl font-extrabold text-blue-600 dark:text-blue-400 my-2'>
-				{t.name}
-			</h2>
-			<p className='text-xl md:text-2xl mb-6'>{t.role}</p>
+			<h1 className='text-2xl md:text-2xl font-bold'>{t.greeting}</h1>
+			<h2 className='text-4xl md:text-6xl font-extrabold'>{t.name}</h2>
+			<p className='text-5xl md:text-md mb-6 max-w-[50ch] my-2 text-red-600 dark:text-red-600'>
+				{t.role}
+			</p>
+			<p className='text-md md:text-xl mb-6 max-w-[60ch] '>{t.text}</p>
 
 			<div className='flex gap-4'>
-				<a
-					href='/cv.pdf'
-					download
-					className='bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition'
-				>
-					{t.cv}
-				</a>
-				<a
-					href='#contact'
-					className='border border-blue-600 text-blue-600 hover:bg-blue-100 dark:hover:bg-blue-900 px-4 py-2 rounded transition'
-				>
-					{t.contact}
-				</a>
+				<button className='py-4 px-3 gap-2 border border-red-500 hover:bg-red-700/40 text-white rounded transition flex'>
+					<Download className='' />
+					<a href='/cv.pdf' download>
+						{t.cv}
+					</a>
+				</button>
+				<button className='py-4 px-3 gap-2 border border-red-500 hover:bg-red-700/40 text-white rounded transition flex'>
+					<Send />
+					<a href='#contact'>{t.contact}</a>
+				</button>
 			</div>
 
 			<div className='flex gap-6 mt-8'>
@@ -57,15 +57,15 @@ export default function Hero() {
 					href='https://github.com/EnzoIbarra'
 					target='_blank'
 					rel='noopener noreferrer'
-					className='hover:text-blue-600 transition'
+					className='hover:text-red-600/90 transition'
 				>
 					<Github className='w-8 h-8' />
 				</a>
 				<a
-					href='https://linkedin.com/in/enzofibid'
+					href='https://linkedin.com/in/enzoibarra'
 					target='_blank'
 					rel='noopener noreferrer'
-					className='hover:text-blue-600 transition'
+					className='hover:text-red-600/90 transition'
 				>
 					<Linkedin className='w-8 h-8' />
 				</a>

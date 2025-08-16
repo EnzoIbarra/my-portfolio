@@ -33,7 +33,7 @@ export default function Contact() {
 				<h3 className='text-2xl font-semibold'>{t.subtitle}</h3>
 
 				<a
-					href='mailto:enzofibid@gmail.com'
+					href='enzofarid.ibarra@gmail.com'
 					className='flex items-center gap-2 border border-white px-4 py-2 rounded hover:bg-white hover:text-black transition'
 				>
 					<Mail size={18} />
@@ -45,7 +45,7 @@ export default function Contact() {
 						href='https://linkedin.com/in/enzoibarra'
 						target='_blank'
 						rel='noopener noreferrer'
-						className='hover:text-blue-500 transition'
+						className='hover:text-red-600/90 transition'
 					>
 						<Linkedin size={28} />
 					</a>
@@ -53,7 +53,7 @@ export default function Contact() {
 						href='https://github.com/EnzoIbarra'
 						target='_blank'
 						rel='noopener noreferrer'
-						className='hover:text-blue-500 transition'
+						className='hover:text-red-600/90 transition'
 					>
 						<Github size={28} />
 					</a>

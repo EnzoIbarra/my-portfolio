@@ -1,20 +1,33 @@
 'use client';
 import TechBadge from './TechBadge';
+import { useLanguage } from '@/context/LanguageContext';
 
 export default function About() {
+	const { language } = useLanguage();
+
+	const content = {
+		es: {
+			title: 'Sobre mí',
+			text: 'Soy Enzo Ibarra, desarrollador frontend formado en Henry, con experiencia en proyectos reales y metodologías ágiles. Disfruto crear interfaces modernas y funcionales, priorizando la experiencia del usuario. Me caracterizo por la buena comunicación, la colaboración en equipo y la facilidad para adaptarme a nuevos desafíos.',
+			technologies: 'Tecnologías y herramientas',
+		},
+		en: {
+			title: 'About me',
+			text: "I'm Enzo Ibarra, a frontend developer trained at Henry, with experience in real-world projects and agile methodologies. I enjoy creating modern and functional interfaces while prioritizing user experience. I’m known for clear communication, teamwork, and adaptability to new challenges.",
+			technologies: 'Technologies and tools',
+		},
+	};
+
+	const t = content[language];
+
 	return (
 		<section id='about' className='py-20 px-6 max-w-7xl mx-auto'>
-			<h2 className='text-3xl font-bold mb-6 text-red-500'>Sobre mí</h2>
+			<h2 className='text-3xl font-bold mb-6 text-red-500'>{t.title}</h2>
 
-			<p className='mb-12 max-w-2xl text-lg'>
-				Soy Enzo Ibarra, desarrollador frontend con experiencia en la creación
-				de interfaces modernas y funcionales. Me apasiona trabajar con
-				tecnologías actuales como React, Next.js y Tailwind CSS, y construir
-				soluciones que impacten positivamente en las personas.
-			</p>
+			<p className='mb-12 max-w-2xl text-lg'>{t.text}</p>
 
 			<h3 className='text-xl font-semibold mb-4 text-white'>
-				Tecnologías y herramientas
+				{t.technologies}
 			</h3>
 
 			<div className='flex flex-wrap gap-4'>
