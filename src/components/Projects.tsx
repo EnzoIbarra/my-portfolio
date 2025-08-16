@@ -1,6 +1,7 @@
 'use client';
 
 import { useLanguage } from '@/context/LanguageContext';
+import TechBadge from './TechBadge';
 
 const projects = {
 	es: [
@@ -8,7 +9,7 @@ const projects = {
 			title: 'Héroes Cercanos',
 			description:
 				'Plataforma de gestión de donaciones, campañas de correo y soporte con IA.',
-			image: '/images/heroes.png',
+			image: '/heroes.png',
 			technologies: [
 				'nextjs',
 				'nestjs',
@@ -115,14 +116,5 @@ export default function Projects() {
 				))}
 			</div>
 		</section>
-	);
-}
-
-function TechBadge({ icon }: { icon: string }) {
-	return (
-		<span className='flex items-center gap-1 bg-zinc-700 text-white text-xs px-3 py-1 rounded-full'>
-			<i className={`devicon-${icon}-original colored text-base`}></i>
-			<span className='capitalize'>{icon}</span>
-		</span>
 	);
 }

@@ -26,7 +26,7 @@ export default function About() {
 				<TechBadge label='NestJS' icon='nestjs' />
 				<TechBadge label='PostgreSQL' icon='postgresql' />
 				<TechBadge label='GitHub' icon='github' />
-				<TechBadge label='API REST' icon='api' />
+				<TechBadge label='API REST' icon='api-rest' />
 				<TechBadge label='AWS' icon='amazonwebservices' />
 				<TechBadge label='MongoDB' icon='mongodb' />
 				<TechBadge label='Redux' icon='redux' />

@@ -42,7 +42,7 @@ export default function Contact() {
 
 				<div className='flex gap-6 mt-4'>
 					<a
-						href='https://linkedin.com/in/enzofibid'
+						href='https://linkedin.com/in/enzoibarra'
 						target='_blank'
 						rel='noopener noreferrer'
 						className='hover:text-blue-500 transition'
